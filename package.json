@@ -2,6 +2,7 @@
   "name": "neuros-home-7",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "God of Automation - AI & Sovereign Systems",
   "scripts": {
     "dev": "vite --host",
