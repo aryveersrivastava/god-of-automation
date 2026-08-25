@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal & Governance Infrastructure – God of Automation</title>
+  <meta name="description" content="Transparency, compliance, and strict data sovereignty. Review our legal framework, DPDP Act compliance, and binding agreements.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/cropped-favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="assets/images/cropped-favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/images/cropped-favicon-180x180.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="index.html#hero" class="header-brand" style="display: flex; align-items: center; gap: 12px;">
+        <img src="assets/images/logo-dark.png" alt="God of Automation" class="header-logo" width="45" height="45">
+        <span style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--color-dark); letter-spacing: -0.5px;">God of Automation</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="primary-navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html#hero" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#about" class="nav-link">
+              Pages <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#about">The Architect</a></li>
+              <li><a href="index.html#team">Leadership</a></li>
+              <li><a href="index.html#testimonials">Client Stories</a></li>
+              <li><a href="index.html#contact">Contacts</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#features" class="nav-link">
+              Solutions <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu dropdown-solutions-menu">
+              <!-- Group 1: Enterprise Infrastructure -->
+              <div class="dropdown-group-col">
+                <a href="index.html#features" class="dropdown-group-header header-enterprise">
+                  <span><i class="fas fa-server"></i> Enterprise Infrastructure</span>
+                  <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
+                </a>
+                <ul class="dropdown-group-list">
+                  <li><a href="deployments/hospital-os.html"><i class="fas fa-hospital-user"></i> Autonomous Hospital OS</a></li>
+                  <li><a href="deployments/distributed-transaction.html"><i class="fas fa-network-wired"></i> Distributed Transaction System</a></li>
+                  <li><a href="deployments/lead-routing.html"><i class="fas fa-route"></i> Autonomous Lead Routing</a></li>
+                  <li><a href="deployments/predictive-analytics.html"><i class="fas fa-chart-line"></i> GenAI Predictive Analytics</a></li>
+                  <li><a href="deployments/custom-infrastructure.html"><i class="fas fa-cubes"></i> Custom AI Infrastructure</a></li>
+                  <li><a href="deployments/orchestrated-outreach.html"><i class="fas fa-paper-plane"></i> LLM-Orchestrated Outreach</a></li>
+                </ul>
+              </div>
+
+              <!-- Group 2: Career Automation -->
+              <div class="dropdown-group-col">
+                <a href="index.html#services" class="dropdown-group-header header-career">
+                  <span><i class="fas fa-user-graduate"></i> Career Automation</span>
+                  <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
+                </a>
+                <ul class="dropdown-group-list">
+                  <li><a href="deployments/ats-bypass-guide.html"><i class="fas fa-shield-alt"></i> The FAANG ATS Bypass Guide</a></li>
+                  <li><a href="deployments/elite-resume-rebuild.html"><i class="fas fa-file-invoice"></i> The Elite Resume Rebuild</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#partners" class="nav-link">Tech Stack</a>
+          </li>
+          <li class="nav-item">
+            <a href="book.html" class="nav-link">Book Call</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button type="button" class="header-action-btn open-search-btn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <button type="button" class="header-action-btn open-sidebar-btn" aria-label="Open Sidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <button type="button" class="header-action-btn mobile-toggle-btn" aria-label="Open Mobile Menu">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+
+        <a href="book.html" class="neuros-button btn-pill-gradient">
+          <span>Deploy Systems</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Offcanvas Sidebar Drawer -->
+  <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+  <aside class="offcanvas-sidebar" id="offcanvasSidebar" aria-label="Navigation & Studio Drawer">
+    <div class="offcanvas-inner-scroll">
+      <div class="offcanvas-header">
+        <a href="index.html#hero" class="offcanvas-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="assets/images/logo-dark.png" alt="God of Automation" width="36" height="36">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 18px; color: var(--color-dark); letter-spacing: -0.5px;">God of Automation</span>
+        </a>
+        <button type="button" class="offcanvas-close-btn" aria-label="Close Sidebar"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="offcanvas-nav-section">
+        <div class="offcanvas-section-label">Navigation</div>
+        <nav class="offcanvas-mobile-nav" aria-label="Mobile Navigation">
+          <ul class="offcanvas-menu-list">
+            <li class="offcanvas-menu-item">
+              <a href="index.html#hero" class="offcanvas-nav-link">
+                <span><i class="fas fa-house-chimney"></i> Home</span>
+              </a>
+            </li>
+
+            <!-- Item 2: Pages Accordion -->
+            <li class="offcanvas-menu-item has-submenu">
+              <div class="offcanvas-menu-title">
+                <a href="index.html#about" class="offcanvas-nav-link">
+                  <span><i class="fas fa-layer-group"></i> Pages</span>
+                </a>
+                <button type="button" class="offcanvas-submenu-toggle" aria-label="Toggle Pages Submenu">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <ul class="offcanvas-submenu">
+                <li><a href="index.html#about"><i class="fas fa-user-astronaut"></i> The Architect</a></li>
+                <li><a href="index.html#team"><i class="fas fa-crown"></i> Leadership</a></li>
+                <li><a href="index.html#testimonials"><i class="fas fa-comments"></i> Client Stories</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-address-book"></i> Contacts</a></li>
+              </ul>
+            </li>
+
+            <li class="offcanvas-menu-item has-submenu">
+              <div class="offcanvas-menu-title">
+                <a href="index.html#features" class="offcanvas-nav-link">
+                  <span><i class="fas fa-cubes-stacked"></i> Solutions</span>
+                </a>
+                <button type="button" class="offcanvas-submenu-toggle" aria-label="Toggle Solutions Submenu">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <ul class="offcanvas-submenu">
+                <li class="offcanvas-group-title" style="color: var(--primary-blue);"><i class="fas fa-server"></i> Enterprise Infrastructure</li>
+                <li><a href="deployments/hospital-os.html"><i class="fas fa-hospital-user"></i> Autonomous Hospital OS</a></li>
+                <li><a href="deployments/distributed-transaction.html"><i class="fas fa-network-wired"></i> Distributed Transaction System</a></li>
+                <li><a href="deployments/lead-routing.html"><i class="fas fa-route"></i> Autonomous Lead Routing</a></li>
+                <li><a href="deployments/predictive-analytics.html"><i class="fas fa-chart-line"></i> GenAI Predictive Analytics</a></li>
+                <li><a href="deployments/custom-infrastructure.html"><i class="fas fa-cubes"></i> Custom AI Infrastructure</a></li>
+                <li><a href="deployments/orchestrated-outreach.html"><i class="fas fa-paper-plane"></i> LLM-Orchestrated Outreach</a></li>
+                
+                <li class="offcanvas-group-title" style="color: var(--primary-coral); margin-top: 10px;"><i class="fas fa-user-graduate"></i> Career Automation</li>
+                <li><a href="deployments/ats-bypass-guide.html"><i class="fas fa-shield-alt"></i> The FAANG ATS Bypass Guide</a></li>
+                <li><a href="deployments/elite-resume-rebuild.html"><i class="fas fa-file-invoice"></i> The Elite Resume Rebuild</a></li>
+              </ul>
+            </li>
+
+            <li class="offcanvas-menu-item">
+              <a href="index.html#partners" class="offcanvas-nav-link">
+                <span><i class="fas fa-microchip"></i> Tech Stack</span>
+              </a>
+            </li>
+
+            <li class="offcanvas-menu-item">
+              <a href="book.html" class="offcanvas-nav-link">
+                <span><i class="fas fa-calendar-check"></i> Book Call</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="offcanvas-info-section">
+        <div class="offcanvas-section-label">Studio Dossier</div>
+        <div class="offcanvas-dossier-card">
+          <h4>God of Automation: Infrastructure for Every Scale</h4>
+          <p>
+            God of Automation is an elite AI Infrastructure Studio engineered by Aryveer Srivastav. We build scalable B2B automation pipelines and algorithmic B2C career optimization systems that permanently eliminate manual workload.
+          </p>
+        </div>
+
+        <div class="offcanvas-contacts-list">
+          <a href="mailto:godofautomationofficial@gmail.com" class="offcanvas-contact-pill">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <p>godofautomationofficial@gmail.com</p>
+            </div>
+          </a>
+          <div class="offcanvas-contact-pill">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span>Location</span>
+              <p>Lucknow, Uttar Pradesh, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas-footer">
+      <a href="book.html" class="neuros-button btn-pill-gradient" style="width: 100%; justify-content: center;">
+        <span>Book Architecture Call</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true">
+    <button type="button" class="search-modal-close" aria-label="Close Search"><i class="fas fa-times"></i></button>
+    <form class="search-form-wrap" id="siteSearchForm">
+      <div class="search-feedback-toast" id="searchToast"><i class="fas fa-check-circle"></i> Navigating to matching topic...</div>
+      <div class="search-input-box">
+        <input type="text" id="siteSearchInput" placeholder="Type keywords (e.g., DPDP, Terms, Privacy)..." aria-label="Search keywords">
+        <button type="submit" aria-label="Perform search"><i class="fas fa-search"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         PAGE 2: /legal HERO & GOVERNANCE PORTAL
+         ========================================================================== -->
+    <section class="legal-hero-section">
+      <div class="container">
+        <div class="legal-hero-inner">
+          <span class="neuros-subheading" style="color: #06B6D4;">Data Sovereignty &amp; Compliance</span>
+          <h1 style="font-size: 46px; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; letter-spacing: -1px;">
+            Legal &amp; Governance Infrastructure
+          </h1>
+          <p style="font-size: 19px; color: rgba(255, 255, 255, 0.85); max-width: 760px; margin: 0 auto; line-height: 1.6;">
+            Transparency, compliance, and strict data sovereignty.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Legal Portal Body -->
+    <section class="legal-layout-section">
+      <div class="container" style="max-width: 1020px;">
+        
+        <!-- Overview Card -->
+        <div style="background: #FFFFFF; border: 1px solid rgba(226, 232, 240, 0.9); border-radius: 24px; padding: 44px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03); margin-bottom: 40px;">
+          <div class="legal-badge-pill"><i class="fas fa-shield-halved"></i> Governance Standard</div>
+          <h2 style="font-size: 28px; font-weight: 800; color: var(--color-dark); margin-bottom: 18px; letter-spacing: -0.5px;">
+            Engineered for Absolute Clarity &amp; Data Sovereignty
+          </h2>
+          <p style="font-size: 17px; line-height: 1.8; color: var(--color-body); margin-bottom: 16px;">
+            At <strong>God of Automation</strong>, we engineer autonomous systems that handle critical enterprise data and highly sensitive personal career information.
+          </p>
+          <p style="font-size: 17px; line-height: 1.8; color: var(--color-body); margin: 0;">
+            Because we operate at the bleeding edge of Artificial Intelligence, Large Language Models (LLMs), and autonomous agentic workflows, our legal framework is built to provide absolute clarity on data processing, API liabilities, and intellectual property.
+          </p>
+        </div>
+
+        <!-- Section: Our Core Commitments -->
+        <div style="margin-bottom: 50px;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <span class="neuros-subheading" style="color: var(--primary-blue);">Guarantees</span>
+            <h3 style="font-size: 32px; font-weight: 800; color: var(--color-dark); letter-spacing: -0.5px;">
+              Our Core Commitments
+            </h3>
+          </div>
+
+          <div class="governance-commitments-grid">
+            <!-- Commitment 1 -->
+            <div class="commitment-card reveal-on-scroll">
+              <div class="card-icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <h4>Zero Unauthorized Telemetry</h4>
+              <p>
+                We do not use your proprietary enterprise data to train public AI models. We utilize zero-retention API endpoints for all LLM orchestration.
+              </p>
+            </div>
+
+            <!-- Commitment 2 -->
+            <div class="commitment-card reveal-on-scroll delay-100">
+              <div class="card-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 182, 212, 0.12)); color: #10B981;">
+                <i class="fas fa-scale-balanced"></i>
+              </div>
+              <h4>DPDP Act Compliance</h4>
+              <p>
+                As an agency headquartered in Lucknow, Uttar Pradesh, India, we strictly adhere to the Digital Personal Data Protection (DPDP) Act, 2023, ensuring lawful processing, purpose limitation, and data minimization.
+              </p>
+            </div>
+
+            <!-- Commitment 3 -->
+            <div class="commitment-card reveal-on-scroll delay-200">
+              <div class="card-icon" style="background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(236, 72, 153, 0.12)); color: #F97316;">
+                <i class="fas fa-fingerprint"></i>
+              </div>
+              <h4>Transparent IP Ownership</h4>
+              <p>
+                We provide explicit boundaries on the intellectual property of AI-generated deliverables versus hard-coded infrastructure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Binding Agreements Gateway -->
+        <div class="agreements-callout-section reveal-on-scroll">
+          <span class="neuros-subheading" style="color: #06B6D4;">Legal Framework</span>
+          <h3 style="font-size: 30px; font-weight: 800; color: #FFFFFF; margin-bottom: 12px; letter-spacing: -0.5px;">
+            Please review our binding agreements below:
+          </h3>
+          <p style="font-size: 16px; color: rgba(255, 255, 255, 0.7); max-width: 680px; line-height: 1.6;">
+            Select a document below to inspect complete operational policies, intellectual property terms, DPDP compliance protocols, and liability scopes.
+          </p>
+
+          <div class="agreements-grid">
+            <!-- Terms Card -->
+            <a href="terms.html" class="agreement-action-card">
+              <div>
+                <div class="legal-badge-pill" style="background: rgba(37, 99, 235, 0.2); color: #60A5FA;">
+                  <i class="fas fa-file-contract"></i> Binding Agreement
+                </div>
+                <h4>Terms of Service <i class="fas fa-arrow-right" style="font-size: 14px; margin-left: 6px; color: #60A5FA;"></i></h4>
+                <p>
+                  Scope of services, deliverables, bespoke infrastructure IP ownership, AI output licensing, API liability limitations, and payment/refund policies.
+                </p>
+              </div>
+              <div class="action-link-btn">
+                <span>View Terms of Service</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+
+            <!-- Privacy Card -->
+            <a href="privacy.html" class="agreement-action-card">
+              <div>
+                <div class="legal-badge-pill" style="background: rgba(16, 185, 129, 0.2); color: #34D399;">
+                  <i class="fas fa-shield-halved"></i> DPDP Act 2023
+                </div>
+                <h4>Privacy Policy <i class="fas fa-arrow-right" style="font-size: 14px; margin-left: 6px; color: #34D399;"></i></h4>
+                <p>
+                  Data minimization standards, zero-retention LLM processing, Data Fiduciary obligations, Data Principal enforceable rights, and contact details.
+                </p>
+              </div>
+              <div class="action-link-btn">
+                <span>View Privacy Policy</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Grievance & Office Contact Details -->
+        <div style="margin-top: 40px; background: #FFFFFF; border: 1px solid rgba(226, 232, 240, 0.9); border-radius: 20px; padding: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px;">
+          <div>
+            <h4 style="font-size: 19px; font-weight: 800; color: var(--color-dark); margin-bottom: 6px;">Legal Inquiries &amp; Grievance Officer</h4>
+            <p style="font-size: 14px; color: var(--color-body); margin: 0;">
+              Aryveer Srivastav &bull; Founder &amp; Lead AI Architect &bull; Lucknow, Uttar Pradesh, India
+            </p>
+          </div>
+          <a href="mailto:godofautomationofficial@gmail.com" class="neuros-button btn-pill-solid">
+            <span><i class="fas fa-envelope" style="margin-right: 8px;"></i> godofautomationofficial@gmail.com</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="contact-footer-section" style="padding-top: 60px;">
+    <div class="container">
+      <div class="footer-main-links" style="border-top: none; padding-top: 0;">
+        <div class="footer-brand-col">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <img src="assets/images/logo-dark.png" alt="God of Automation" style="filter: brightness(0) invert(1); height: 42px;">
+            <span style="font-size: 22px; font-weight: 800; color: #FFFFFF;">God of Automation</span>
+          </div>
+          <div class="special-text">
+            Sovereign Workflows.<br>Autonomous Operations.
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h6 class="has_gradient_color_text">Navigation</h6>
+          <ul>
+            <li><a href="index.html#about">About Aryveer</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="legal.html">Legal &amp; Governance</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="resources.html">Resources &amp; Playbooks</a></li>
+            <li><a href="book.html">Book Architecture Call</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h6 class="has_gradient_color_text">Deployments</h6>
+          <ul>
+            <li><a href="deployments/custom-infrastructure.html">Custom AI Infrastructure</a></li>
+            <li><a href="deployments/elite-resume-rebuild.html">Elite Resume Rebuild</a></li>
+            <li><a href="deployments/ats-bypass-guide.html">ATS Bypass Guide</a></li>
+            <li><a href="deployments/lead-routing.html">Autonomous Lead Routing</a></li>
+            <li><a href="deployments/predictive-analytics.html">GenAI Predictive Analytics</a></li>
+            <li><a href="deployments/hospital-os.html">Hospital OS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <div>© <a href="index.html#hero"><u>God of Automation</u></a> 2026. Engineered by Aryveer Srivastav. All rights reserved.</div>
+        <div class="footer-btn-row">
+          <a href="faq.html" class="footer-pill-btn"><i class="fas fa-circle-question"></i> FAQs</a>
+          <a href="legal.html" class="footer-pill-btn btn-cyan"><i class="fas fa-scale-balanced"></i> Legal &amp; Governance</a>
+          <a href="terms.html" class="footer-pill-btn"><i class="fas fa-file-contract"></i> Terms of Service</a>
+          <a href="privacy.html" class="footer-pill-btn"><i class="fas fa-shield-halved"></i> Privacy Policy</a>
+          <a href="book.html" class="footer-pill-btn"><i class="fas fa-calendar-check"></i> Book Call</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/database.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

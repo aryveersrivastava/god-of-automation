@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distributed Transaction System – God of Automation</title>
+  <meta name="description" content="Fault-tolerant, high-throughput distributed transaction pipeline built with Apache Kafka, Spring Boot, and PostgreSQL.">
+  
+  <link rel="icon" href="../assets/images/cropped-favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="../assets/images/cropped-favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../assets/images/cropped-favicon-180x180.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="../index.html#hero" class="header-brand" style="display: flex; align-items: center; gap: 12px;">
+        <img src="../assets/images/logo-dark.png" alt="God of Automation" class="header-logo" width="45" height="45">
+        <span style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--color-dark); letter-spacing: -0.5px;">God of Automation</span>
+      </a>
+
+      <nav class="primary-navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="../index.html#hero" class="nav-link">Home</a></li>
+          <li class="nav-item">
+            <a href="../index.html#about" class="nav-link">Pages <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="../index.html#about">The Architect</a></li>
+              <li><a href="../index.html#team">Leadership</a></li>
+              <li><a href="../index.html#testimonials">Client Stories</a></li>
+              <li><a href="../index.html#contact">Contacts</a></li>
+            </ul>
+          </li>
+          <li class="nav-item active">
+            <a href="../index.html#features" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu dropdown-solutions-menu">
+              <!-- Group 1: Enterprise Infrastructure -->
+              <div class="dropdown-group-col">
+                <a href="../index.html#features" class="dropdown-group-header header-enterprise">
+                  <span><i class="fas fa-server"></i> Enterprise Infrastructure</span>
+                  <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
+                </a>
+                <ul class="dropdown-group-list">
+                  <li><a href="hospital-os.html"><i class="fas fa-hospital-user"></i> Autonomous Hospital OS</a></li>
+                  <li><a href="distributed-transaction.html"><i class="fas fa-network-wired"></i> Distributed Transaction System</a></li>
+                  <li><a href="lead-routing.html"><i class="fas fa-route"></i> Autonomous Lead Routing</a></li>
+                  <li><a href="predictive-analytics.html"><i class="fas fa-chart-line"></i> GenAI Predictive Analytics</a></li>
+                  <li><a href="custom-infrastructure.html"><i class="fas fa-cubes"></i> Custom AI Infrastructure</a></li>
+                  <li><a href="orchestrated-outreach.html"><i class="fas fa-paper-plane"></i> LLM-Orchestrated Outreach</a></li>
+                </ul>
+              </div>
+
+              <!-- Group 2: Career Automation -->
+              <div class="dropdown-group-col">
+                <a href="../index.html#services" class="dropdown-group-header header-career">
+                  <span><i class="fas fa-user-graduate"></i> Career Automation</span>
+                  <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
+                </a>
+                <ul class="dropdown-group-list">
+                  <li><a href="ats-bypass-guide.html"><i class="fas fa-shield-alt"></i> The FAANG ATS Bypass Guide</a></li>
+                  <li><a href="elite-resume-rebuild.html"><i class="fas fa-file-invoice"></i> The Elite Resume Rebuild</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a href="../index.html#partners" class="nav-link">Tech Stack</a></li>
+          <li class="nav-item"><a href="../book.html" class="nav-link">Book Call</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-action-btn open-search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+        <button type="button" class="header-action-btn open-sidebar-btn" aria-label="Open Sidebar"><i class="fas fa-bars"></i></button>
+        <a href="../index.html#contact" class="neuros-button btn-pill-gradient">
+          <span>Deploy Systems</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       OFF-CANVAS SIDEBAR DRAWER (EXECUTIVE NAVIGATION & STUDIO DOSSIER)
+       ========================================================================== -->
+  <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+  <aside class="offcanvas-sidebar" id="offcanvasSidebar" aria-label="Navigation & Studio Drawer">
+    <div class="offcanvas-inner-scroll">
+      <!-- Top Header -->
+      <div class="offcanvas-header">
+        <a href="../index.html#hero" class="offcanvas-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="../assets/images/logo-dark.png" alt="God of Automation" width="36" height="36">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 18px; color: var(--color-dark); letter-spacing: -0.5px;">God of Automation</span>
+        </a>
+        <button type="button" class="offcanvas-close-btn" aria-label="Close Sidebar">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Section 1: Main Menu Navigation -->
+      <div class="offcanvas-nav-section">
+        <div class="offcanvas-section-label">Navigation</div>
+        <nav class="offcanvas-mobile-nav" aria-label="Mobile Navigation">
+          <ul class="offcanvas-menu-list">
+            <!-- Item 1: Home -->
+            <li class="offcanvas-menu-item">
+              <a href="../index.html#hero" class="offcanvas-nav-link">
+                <span><i class="fas fa-house-chimney"></i> Home</span>
+              </a>
+            </li>
+
+            <!-- Item 2: Pages Accordion -->
+            <li class="offcanvas-menu-item has-submenu">
+              <div class="offcanvas-menu-title">
+                <a href="../index.html#about" class="offcanvas-nav-link">
+                  <span><i class="fas fa-layer-group"></i> Pages</span>
+                </a>
+                <button type="button" class="offcanvas-submenu-toggle" aria-label="Toggle Pages Submenu">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <ul class="offcanvas-submenu">
+                <li><a href="../index.html#about"><i class="fas fa-user-astronaut"></i> The Architect</a></li>
+                <li><a href="../index.html#team"><i class="fas fa-crown"></i> Leadership</a></li>
+                <li><a href="../index.html#testimonials"><i class="fas fa-comments"></i> Client Stories</a></li>
+                <li><a href="../index.html#contact"><i class="fas fa-address-book"></i> Contacts</a></li>
+              </ul>
+            </li>
+
+            <!-- Item 3: Solutions Accordion -->
+            <li class="offcanvas-menu-item has-submenu open">
+              <div class="offcanvas-menu-title">
+                <a href="../index.html#features" class="offcanvas-nav-link">
+                  <span><i class="fas fa-cubes-stacked"></i> Solutions</span>
+                </a>
+                <button type="button" class="offcanvas-submenu-toggle" aria-label="Toggle Solutions Submenu">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <ul class="offcanvas-submenu">
+                <li><a href="../index.html#features"><i class="fas fa-server"></i> Deployments Overview</a></li>
+                <li><a href="hospital-os.html"><i class="fas fa-hospital-user"></i> Autonomous Hospital OS</a></li>
+                <li><a href="distributed-transaction.html"><i class="fas fa-network-wired"></i> Distributed Transaction System</a></li>
+                <li><a href="lead-routing.html"><i class="fas fa-route"></i> Autonomous Lead Routing</a></li>
+                <li><a href="predictive-analytics.html"><i class="fas fa-chart-line"></i> GenAI Predictive Analytics</a></li>
+                <li><a href="custom-infrastructure.html"><i class="fas fa-cubes"></i> Custom AI Infrastructure</a></li>
+                <li><a href="elite-resume-rebuild.html"><i class="fas fa-file-invoice"></i> The Elite Resume Rebuild</a></li>
+                <li><a href="ats-bypass-guide.html"><i class="fas fa-shield-alt"></i> The FAANG ATS Bypass Guide</a></li>
+                <li><a href="orchestrated-outreach.html"><i class="fas fa-paper-plane"></i> LLM-Orchestrated Outreach</a></li>
+                <li><a href="../index.html#services"><i class="fas fa-wand-magic-sparkles"></i> Services & Solutions</a></li>
+              </ul>
+            </li>
+
+            <!-- Item 4: Tech Stack -->
+            <li class="offcanvas-menu-item">
+              <a href="../index.html#partners" class="offcanvas-nav-link">
+                <span><i class="fas fa-microchip"></i> Tech Stack</span>
+              </a>
+            </li>
+
+            <!-- Item 5: Book Call -->
+            <li class="offcanvas-menu-item">
+              <a href="../book.html" class="offcanvas-nav-link">
+                <span><i class="fas fa-calendar-check"></i> Book Call</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Section 2: Studio Overview & Direct Contacts -->
+      <div class="offcanvas-info-section">
+        <div class="offcanvas-section-label">Studio Dossier</div>
+        <div class="offcanvas-dossier-card">
+          <h4>Sovereign Workflows.<br>Autonomous Operations.</h4>
+          <p>
+            Elite AI Infrastructure Studio engineered by Aryveer Srivastav. Building low-latency automation pipelines and LLM workflows.
+          </p>
+        </div>
+
+        <div class="offcanvas-contacts-list">
+          <a href="mailto:godofautomationofficial@gmail.com" class="offcanvas-contact-pill">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <p>godofautomationofficial@gmail.com</p>
+            </div>
+          </a>
+          <div class="offcanvas-contact-pill">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span>Location</span>
+              <p>Lucknow, Uttar Pradesh, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Action Footer -->
+    <div class="offcanvas-footer">
+      <div class="offcanvas-socials">
+        <a href="https://www.linkedin.com/in/aryveer-srivastav" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/aryveersrivastav" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:godofautomationofficial@gmail.com" class="social-icon-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <a href="../index.html#contact" class="neuros-button btn-pill-gradient" style="width: 100%; justify-content: center;">
+        <span>Deploy Systems</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Deployment Hero -->
+    <section class="deployment-detail-hero">
+      <div class="container">
+        <div class="page-breadcrumb reveal-on-scroll">
+          <a href="../index.html#hero">Home</a>
+          <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+          <a href="../index.html#features">Deployments</a>
+          <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+          <span>02. Distributed Transaction System</span>
+        </div>
+
+        <span class="neuros-subheading reveal-on-scroll">Event-Driven Architecture</span>
+        <h1 class="deployment-hero-title reveal-on-scroll delay-100">
+          Distributed Transaction System: <span class="has_gradient_color_text">Kafka & Spring Boot Pipeline</span>
+        </h1>
+        <p class="deployment-hero-subtitle reveal-on-scroll delay-200">
+          Engineered a decoupled, fault-tolerant transactional pipeline handling 10,000+ concurrent events/sec. Features persistent message logs, idempotent consumers, automated dead-letter-queue (DLQ) retry mechanisms, and ACID-compliant state management.
+        </p>
+
+        <div class="deployment-stack-pills reveal-on-scroll delay-300">
+          <div class="stack-pill-tag"><i class="fas fa-stream"></i> Apache Kafka</div>
+          <div class="stack-pill-tag"><i class="fas fa-leaf"></i> Spring Boot Gateway</div>
+          <div class="stack-pill-tag"><i class="fas fa-database"></i> PostgreSQL Clusters</div>
+          <div class="stack-pill-tag"><i class="fab fa-aws"></i> AWS Beanstalk</div>
+          <div class="stack-pill-tag"><i class="fas fa-shield-alt"></i> Idempotent DLQ</div>
+        </div>
+
+        <div class="hero-buttons-row reveal-on-scroll delay-400">
+          <a href="../index.html#contact" class="neuros-button btn-pill-solid">
+            <span>Explore Architecture</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="../index.html#contact" class="neuros-button btn-pill-outline">
+            <span>Book Architecture Call</span>
+            <i class="fas fa-calendar-check"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Workflow Pipeline Flowchart -->
+    <section class="pipeline-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="neuros-subheading">System Topology</span>
+          <h2 class="section-title">The Architecture & <span class="has_gradient_color_text">Workflow Pipeline</span></h2>
+        </div>
+
+        <div class="pipeline-flowchart-card reveal-on-scroll delay-100">
+          <div class="pipeline-flowchart-title">
+            <i class="fas fa-project-diagram"></i>
+            <span>Decoupled Event Streaming Flowchart</span>
+          </div>
+
+          <div class="pipeline-nodes-track">
+            <div class="pipeline-node-box">
+              <span class="node-step-index">Node 01</span>
+              <div class="node-icon-circle"><i class="fas fa-satellite-dish"></i></div>
+              <h4 class="node-label-title">Client Ingestion API</h4>
+              <p class="node-label-desc">Receives high-concurrency transactional requests with strict schema validation.</p>
+            </div>
+
+            <div class="pipeline-node-box">
+              <span class="node-step-index">Node 02</span>
+              <div class="node-icon-circle"><i class="fas fa-leaf"></i></div>
+              <h4 class="node-label-title">Spring Boot Gateway</h4>
+              <p class="node-label-desc">Authenticates API tokens, shapes traffic, and routes non-blocking async events.</p>
+            </div>
+
+            <div class="pipeline-node-box">
+              <span class="node-step-index">Node 03</span>
+              <div class="node-icon-circle"><i class="fas fa-stream"></i></div>
+              <h4 class="node-label-title">Kafka Partitioned Topics</h4>
+              <p class="node-label-desc">Persists ordered message streams across distributed partitions for replayability.</p>
+            </div>
+
+            <div class="pipeline-node-box">
+              <span class="node-step-index">Node 04</span>
+              <div class="node-icon-circle"><i class="fas fa-microchip"></i></div>
+              <h4 class="node-label-title">Microservice Workers</h4>
+              <p class="node-label-desc">Idempotent consumer pools processing billing, inventory, and user notification events.</p>
+            </div>
+
+            <div class="pipeline-node-box">
+              <span class="node-step-index">Node 05</span>
+              <div class="node-icon-circle"><i class="fas fa-database"></i></div>
+              <h4 class="node-label-title">ACID SQL Clusters</h4>
+              <p class="node-label-desc">Executes distributed database writes with zero deadlocks or transaction locks.</p>
+            </div>
+
+            <div class="pipeline-node-box">
+              <span class="node-step-index">Node 06</span>
+              <div class="node-icon-circle"><i class="fas fa-redo-alt"></i></div>
+              <h4 class="node-label-title">Async DLQ Monitoring</h4>
+              <p class="node-label-desc">Automated Dead Letter Queue retry circuit isolating transient network failures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Feature Matrix -->
+    <section class="matrix-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="neuros-subheading">Engineering Specifications</span>
+          <h2 class="section-title">Deep Feature <span class="has_gradient_color_text">Matrix</span></h2>
+        </div>
+
+        <div class="matrix-grid">
+          <div class="matrix-card reveal-on-scroll delay-100">
+            <div class="matrix-card-icon"><i class="fas fa-bolt"></i></div>
+            <div class="matrix-card-content">
+              <h4>Decoupled Async Event-Streaming</h4>
+              <p>Event-driven microservices architecture handling massive, spiky transactional surges without thread exhaustion or API gateway dropouts.</p>
+            </div>
+          </div>
+
+          <div class="matrix-card reveal-on-scroll delay-200">
+            <div class="matrix-card-icon"><i class="fas fa-fingerprint"></i></div>
+            <div class="matrix-card-content">
+              <h4>Fault-Tolerant Idempotent Consumers</h4>
+              <p>Persistent Kafka log replay paired with strict deduplication keys prevents duplicate ledger charges or double-billing during network blips.</p>
+            </div>
+          </div>
+
+          <div class="matrix-card reveal-on-scroll delay-300">
+            <div class="matrix-card-icon"><i class="fas fa-sync-alt"></i></div>
+            <div class="matrix-card-content">
+              <h4>Dead Letter Queues (DLQ) & Auto-Retry</h4>
+              <p>Automated exponential backoff and DLQ routing isolate failing third-party endpoints without blocking healthy high-priority pipeline transactions.</p>
+            </div>
+          </div>
+
+          <div class="matrix-card reveal-on-scroll delay-400">
+            <div class="matrix-card-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="matrix-card-content">
+              <h4>Sub-Millisecond Internal Routing</h4>
+              <p>Zero cross-service thread blocking ensures ultra-low internal message latency (&lt;45ms write acknowledgment under peak loads).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Operational Comparison & Metrics Graph -->
+    <section class="comparison-section">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="neuros-subheading">Concurrency & Reliability</span>
+          <h2 class="section-title">Monolithic Synchronous Stack vs <span class="has_gradient_color_text">Kafka Pipeline</span></h2>
+        </div>
+
+        <div class="comparison-grid">
+          <!-- Table -->
+          <div class="comparison-table-wrap reveal-on-scroll delay-100">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Performance Metric</th>
+                  <th>Monolithic Synchronous Stack</th>
+                  <th>Distributed Kafka Pipeline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Peak Throughput</strong></td>
+                  <td><span class="badge-traditional"><i class="fas fa-times-circle"></i> Crashes at &gt;500 req/sec</span></td>
+                  <td><span class="badge-autonomous"><i class="fas fa-check-circle"></i> 10,000+ events/sec horizontally scalable</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Failure Recovery</strong></td>
+                  <td><span class="badge-traditional"><i class="fas fa-times-circle"></i> Dropped DB writes &amp; data loss</span></td>
+                  <td><span class="badge-autonomous"><i class="fas fa-check-circle"></i> Zero data loss (Persistent replay)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Service Dependency</strong></td>
+                  <td><span class="badge-traditional"><i class="fas fa-times-circle"></i> Cascading failures crash app</span></td>
+                  <td><span class="badge-autonomous"><i class="fas fa-check-circle"></i> Decoupled (Downstream doesn't block ingress)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>System Latency</strong></td>
+                  <td><span class="badge-traditional"><i class="fas fa-times-circle"></i> High contention (&gt;1.2s under load)</span></td>
+                  <td><span class="badge-autonomous"><i class="fas fa-check-circle"></i> Consistent low latency (&lt;45ms write ack)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Metric Comparison Graph -->
+          <div class="metric-bars-card reveal-on-scroll delay-200">
+            <h4>Throughput & Uptime Resilience</h4>
+            
+            <div class="metric-bar-group">
+              <div class="metric-bar-label">
+                <span>Concurrency Capacity (10,000+ ev/s)</span>
+                <span>100%</span>
+              </div>
+              <div class="metric-bar-track">
+                <div class="metric-bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div class="metric-bar-group">
+              <div class="metric-bar-label">
+                <span>Data Loss Prevention Rate</span>
+                <span>100%</span>
+              </div>
+              <div class="metric-bar-track">
+                <div class="metric-bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div class="metric-bar-group">
+              <div class="metric-bar-label">
+                <span>Latency Optimization (&lt;45ms)</span>
+                <span>96.2%</span>
+              </div>
+              <div class="metric-bar-track">
+                <div class="metric-bar-fill" style="width: 96.2%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quantified Impact Box -->
+        <div class="impact-callout-box reveal-on-scroll delay-100">
+          <div class="impact-left">
+            <h3>Quantified Architectural Impact</h3>
+            <p>Eliminates <strong>100% of high-concurrency dropouts</strong> and completely removes developer debugging time for transactional deadlocks.</p>
+          </div>
+          <div class="impact-right">
+            <a href="../index.html#contact" class="neuros-button btn-pill-solid" style="background: #FFFFFF; color: var(--color-dark);">
+              <span>Deploy System</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="contact-footer-section" id="contact">
+    <div class="container">
+      <div class="footer-main-links">
+        <div class="footer-brand-col">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <img src="../assets/images/logo-dark.png" alt="God of Automation" style="filter: brightness(0) invert(1); height: 42px;">
+            <span style="font-size: 22px; font-weight: 800; color: #FFFFFF;">God of Automation</span>
+          </div>
+          <div class="special-text">Sovereign Workflows.<br>Autonomous Operations.</div>
+        </div>
+        <div class="footer-links-col">
+          <h6 class="has_gradient_color_text">Deployments</h6>
+          <ul>
+            <li><a href="hospital-os.html">Autonomous Hospital OS</a></li>
+            <li><a href="distributed-transaction.html">Distributed Transaction System</a></li>
+            <li><a href="lead-routing.html">Autonomous Lead Routing Engine</a></li>
+            <li><a href="predictive-analytics.html">GenAI Predictive Analytics</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h6 class="has_gradient_color_text">Services & Deployments</h6>
+          <ul>
+            <li><a href="custom-infrastructure.html">Custom AI Infrastructure</a></li>
+            <li><a href="elite-resume-rebuild.html">The Elite Resume Rebuild</a></li>
+            <li><a href="ats-bypass-guide.html">ATS Bypass Guide</a></li>
+            <li><a href="orchestrated-outreach.html">LLM-Orchestrated Outreach</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div>© <a href="../index.html#hero"><u>God of Automation</u></a> 2026. Engineered by Aryveer Srivastav. All rights reserved.</div>
+        <div class="footer-btn-row">
+          <a href="../faq.html" class="footer-pill-btn"><i class="fas fa-circle-question"></i> FAQs</a>
+          <a href="../legal.html" class="footer-pill-btn"><i class="fas fa-scale-balanced"></i> Legal &amp; Governance</a>
+          <a href="../terms.html" class="footer-pill-btn"><i class="fas fa-file-contract"></i> Terms of Service</a>
+          <a href="../privacy.html" class="footer-pill-btn"><i class="fas fa-shield-halved"></i> Privacy Policy</a>
+          <a href="../book.html" class="footer-pill-btn"><i class="fas fa-calendar-check"></i> Book Call</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Database Console Badge -->
+  <div class="floating-db-pill open-db-console-btn" id="floatingDbPill" title="Open Sovereign Database & Leads Console">
+    <span class="db-dot"></span>
+    <span>Database Active</span>
+    <i class="fas fa-table-cells" style="color: var(--primary-blue); font-size: 11px;"></i>
+  </div>
+
+  <!-- Architecture Consultation Booking Modal -->
+  <div class="booking-modal" id="bookingModal" role="dialog" aria-modal="true">
+    <div class="booking-dialog">
+      <div class="booking-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-calendar-check" style="color: var(--primary-blue); font-size: 20px;"></i>
+          <h3>Book Architecture Consultation</h3>
+        </div>
+        <button type="button" class="db-console-close booking-modal-close" aria-label="Close Modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="booking-body">
+        <form id="bookingModalForm" class="booking-form">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" name="clientName" id="bmName" placeholder="e.g. John Doe" required>
+          </div>
+          <div class="form-group">
+            <label>Work Email *</label>
+            <input type="email" name="email" id="bmEmail" placeholder="e.g. john@enterprise.com" required>
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" name="phone" id="bmPhone" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label>Target Architecture / System</label>
+            <select name="targetDeployment" id="bmDeployment">
+              <option value="01. Autonomous Hospital OS">01. Autonomous Hospital OS (Healthcare)</option>
+              <option value="02. Distributed Transaction System" selected>02. Distributed Transaction System (FinTech)</option>
+              <option value="03. Autonomous Lead Routing">03. Autonomous Lead Routing (SalesOps)</option>
+              <option value="04. GenAI Predictive Analytics">04. GenAI Predictive Analytics</option>
+              <option value="05. Custom AI Infrastructure">05. Custom AI Infrastructure</option>
+              <option value="06. The Elite Resume Rebuild">06. The Elite Resume Rebuild</option>
+              <option value="07. The FAANG ATS Bypass Guide">07. The FAANG ATS Bypass Guide</option>
+              <option value="08. LLM-Orchestrated Outreach">08. LLM-Orchestrated Outreach</option>
+            </select>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="form-group">
+              <label>Preferred Date *</label>
+              <input type="date" name="preferredDate" id="bmDate" required>
+            </div>
+            <div class="form-group">
+              <label>Preferred Time *</label>
+              <select name="preferredTime" id="bmTime">
+                <option value="11:00 IST">11:00 AM IST</option>
+                <option value="14:00 IST" selected>02:00 PM IST</option>
+                <option value="16:30 IST">04:30 PM IST</option>
+                <option value="19:00 IST">07:00 PM IST</option>
+                <option value="21:30 IST">09:30 PM IST (US EST)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Architecture Scope / Notes</label>
+            <textarea name="notes" id="bmNotes" rows="2" placeholder="Briefly specify key challenges, tech stack, or volume requirements..."></textarea>
+          </div>
+          <button type="submit" class="neuros-button btn-pill-solid" id="bmSubmitBtn" style="width: 100%; justify-content: center; margin-top: 10px;">
+            <span>Confirm Consultation Booking</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <div class="form-status-msg" id="bookingFormStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Executive Database Console Modal -->
+  <div class="db-console-modal" id="databaseConsoleModal" role="dialog" aria-modal="true">
+    <div class="db-console-dialog">
+      <div class="db-console-header">
+        <div class="db-console-title">
+          <i class="fas fa-database" style="color: var(--primary-blue); font-size: 22px;"></i>
+          <div>
+            <h3>Sovereign Database Console</h3>
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 2px;">
+              <span class="db-status-badge" id="dbConsoleStatusBadge">
+                <i class="fas fa-check-circle"></i> Sovereign IndexedDB Active
+              </span>
+              <span style="font-size: 11px; color: var(--color-body-muted);">Real-time Client & Cloud Sync</span>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="db-console-close db-console-modal-close" aria-label="Close Console"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="db-tabs-bar">
+        <button type="button" class="db-tab-btn active" data-tab="leadsTab">
+          <i class="fas fa-inbox"></i> Leads & Inquiries
+          <span class="db-tab-count" id="dbLeadsCountBadge">0</span>
+        </button>
+        <button type="button" class="db-tab-btn" data-tab="bookingsTab">
+          <i class="fas fa-calendar-check"></i> Bookings
+          <span class="db-tab-count" id="dbBookingsCountBadge">0</span>
+        </button>
+        <button type="button" class="db-tab-btn" data-tab="supabaseTab">
+          <i class="fas fa-bolt"></i> Supabase Cloud Config
+        </button>
+      </div>
+      <div class="db-console-body">
+        <div class="db-tab-pane active" id="leadsTab">
+          <div class="db-toolbar">
+            <div class="db-search-box">
+              <i class="fas fa-search" style="color: var(--color-body-muted);"></i>
+              <input type="text" id="dbLeadsSearchInput" placeholder="Search by name, email, ref ID...">
+            </div>
+            <div class="db-toolbar-actions">
+              <button type="button" class="db-btn" id="dbExportLeadsCsvBtn"><i class="fas fa-file-csv"></i> Export CSV</button>
+              <button type="button" class="db-btn" id="dbExportLeadsJsonBtn"><i class="fas fa-file-code"></i> Export JSON</button>
+            </div>
+          </div>
+          <div class="db-table-wrap">
+            <table class="db-table" id="dbLeadsTable">
+              <thead>
+                <tr>
+                  <th>Ref ID</th>
+                  <th>Date</th>
+                  <th>Client / Contact</th>
+                  <th>Service Interest</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="dbLeadsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="db-tab-pane" id="bookingsTab">
+          <div class="db-toolbar">
+            <div class="db-search-box">
+              <i class="fas fa-search" style="color: var(--color-body-muted);"></i>
+              <input type="text" id="dbBookingsSearchInput" placeholder="Search bookings...">
+            </div>
+            <div class="db-toolbar-actions">
+              <button type="button" class="db-btn" id="dbExportBookingsCsvBtn"><i class="fas fa-file-csv"></i> Export CSV</button>
+              <button type="button" class="db-btn" id="dbExportBookingsJsonBtn"><i class="fas fa-file-code"></i> Export JSON</button>
+            </div>
+          </div>
+          <div class="db-table-wrap">
+            <table class="db-table" id="dbBookingsTable">
+              <thead>
+                <tr>
+                  <th>Ref ID</th>
+                  <th>Consultation Date</th>
+                  <th>Client</th>
+                  <th>Target Deployment</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="dbBookingsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="db-tab-pane" id="supabaseTab">
+          <div class="db-settings-card">
+            <h4><i class="fas fa-bolt" style="color: var(--primary-coral);"></i> Connect Supabase PostgreSQL Cluster</h4>
+            <p>Connect your production Supabase database to automatically synchronize all incoming leads and consultations.</p>
+            <form id="dbSupabaseSettingsForm">
+              <div class="db-input-group">
+                <label>Supabase Project URL</label>
+                <input type="url" id="sbProjectUrl" placeholder="https://your-project-id.supabase.co">
+              </div>
+              <div class="db-input-group">
+                <label>Supabase Anon Public API Key</label>
+                <input type="password" id="sbAnonKey" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; margin-top: 20px;">
+                <button type="submit" class="db-btn db-btn-primary"><i class="fas fa-save"></i> Save Credentials</button>
+                <button type="button" class="db-btn" id="sbTestConnBtn"><i class="fas fa-network-wired"></i> Test Connection</button>
+              </div>
+              <div id="sbSettingsStatusMsg" style="margin-top: 14px; font-size: 13px; font-weight: 700;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="../js/database.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

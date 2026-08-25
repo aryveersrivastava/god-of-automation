@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions – God of Automation</title>
+  <meta name="description" content="Deep-dive answers into the architecture, security, and mechanics of the God of Automation ecosystem.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/cropped-favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="assets/images/cropped-favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/images/cropped-favicon-180x180.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="index.html#hero" class="header-brand" style="display: flex; align-items: center; gap: 12px;">
+        <img src="assets/images/logo-dark.png" alt="God of Automation" class="header-logo" width="45" height="45">
+        <span style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--color-dark); letter-spacing: -0.5px;">God of Automation</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="primary-navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html#hero" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#about" class="nav-link">
+              Pages <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#about">The Architect</a></li>
+              <li><a href="index.html#team">Leadership</a></li>
+              <li><a href="index.html#testimonials">Client Stories</a></li>
+              <li><a href="index.html#contact">Contacts</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#features" class="nav-link">
+              Solutions <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu dropdown-solutions-menu">
+              <!-- Group 1: Enterprise Infrastructure -->
+              <div class="dropdown-group-col">
+                <a href="index.html#features" class="dropdown-group-header header-enterprise">
+                  <span><i class="fas fa-server"></i> Enterprise Infrastructure</span>
+                  <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
+                </a>
+                <ul class="dropdown-group-list">
+                  <li><a href="deployments/hospital-os.html"><i class="fas fa-hospital-user"></i> Autonomous Hospital OS</a></li>
+                  <li><a href="deployments/distributed-transaction.html"><i class="fas fa-network-wired"></i> Distributed Transaction System</a></li>
+                  <li><a href="deployments/lead-routing.html"><i class="fas fa-route"></i> Autonomous Lead Routing</a></li>
+                  <li><a href="deployments/predictive-analytics.html"><i class="fas fa-chart-line"></i> GenAI Predictive Analytics</a></li>
+                  <li><a href="deployments/custom-infrastructure.html"><i class="fas fa-cubes"></i> Custom AI Infrastructure</a></li>
+                  <li><a href="deployments/orchestrated-outreach.html"><i class="fas fa-paper-plane"></i> LLM-Orchestrated Outreach</a></li>
+                </ul>
+              </div>
+
+              <!-- Group 2: Career Automation -->
+              <div class="dropdown-group-col">
+                <a href="index.html#services" class="dropdown-group-header header-career">
+                  <span><i class="fas fa-user-graduate"></i> Career Automation</span>
+                  <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
+                </a>
+                <ul class="dropdown-group-list">
+                  <li><a href="deployments/ats-bypass-guide.html"><i class="fas fa-shield-alt"></i> The FAANG ATS Bypass Guide</a></li>
+                  <li><a href="deployments/elite-resume-rebuild.html"><i class="fas fa-file-invoice"></i> The Elite Resume Rebuild</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#partners" class="nav-link">Tech Stack</a>
+          </li>
+          <li class="nav-item">
+            <a href="book.html" class="nav-link">Book Call</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button type="button" class="header-action-btn open-search-btn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <button type="button" class="header-action-btn open-sidebar-btn" aria-label="Open Sidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <button type="button" class="header-action-btn mobile-toggle-btn" aria-label="Open Mobile Menu">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+
+        <a href="book.html" class="neuros-button btn-pill-gradient">
+          <span>Deploy Systems</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Offcanvas Sidebar Drawer -->
+  <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+  <aside class="offcanvas-sidebar" id="offcanvasSidebar" aria-label="Navigation & Studio Drawer">
+    <div class="offcanvas-inner-scroll">
+      <div class="offcanvas-header">
+        <a href="index.html#hero" class="offcanvas-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="assets/images/logo-dark.png" alt="God of Automation" width="36" height="36">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 18px; color: var(--color-dark); letter-spacing: -0.5px;">God of Automation</span>
+        </a>
+        <button type="button" class="offcanvas-close-btn" aria-label="Close Sidebar"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="offcanvas-nav-section">
+        <div class="offcanvas-section-label">Navigation</div>
+        <nav class="offcanvas-mobile-nav" aria-label="Mobile Navigation">
+          <ul class="offcanvas-menu-list">
+            <li class="offcanvas-menu-item">
+              <a href="index.html#hero" class="offcanvas-nav-link">
+                <span><i class="fas fa-house-chimney"></i> Home</span>
+              </a>
+            </li>
+
+            <!-- Item 2: Pages Accordion -->
+            <li class="offcanvas-menu-item has-submenu">
+              <div class="offcanvas-menu-title">
+                <a href="index.html#about" class="offcanvas-nav-link">
+                  <span><i class="fas fa-layer-group"></i> Pages</span>
+                </a>
+                <button type="button" class="offcanvas-submenu-toggle" aria-label="Toggle Pages Submenu">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <ul class="offcanvas-submenu">
+                <li><a href="index.html#about"><i class="fas fa-user-astronaut"></i> The Architect</a></li>
+                <li><a href="index.html#team"><i class="fas fa-crown"></i> Leadership</a></li>
+                <li><a href="index.html#testimonials"><i class="fas fa-comments"></i> Client Stories</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-address-book"></i> Contacts</a></li>
+              </ul>
+            </li>
+
+            <li class="offcanvas-menu-item has-submenu">
+              <div class="offcanvas-menu-title">
+                <a href="index.html#features" class="offcanvas-nav-link">
+                  <span><i class="fas fa-cubes-stacked"></i> Solutions</span>
+                </a>
+                <button type="button" class="offcanvas-submenu-toggle" aria-label="Toggle Solutions Submenu">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <ul class="offcanvas-submenu">
+                <li class="offcanvas-group-title" style="color: var(--primary-blue);"><i class="fas fa-server"></i> Enterprise Infrastructure</li>
+                <li><a href="deployments/hospital-os.html"><i class="fas fa-hospital-user"></i> Autonomous Hospital OS</a></li>
+                <li><a href="deployments/distributed-transaction.html"><i class="fas fa-network-wired"></i> Distributed Transaction System</a></li>
+                <li><a href="deployments/lead-routing.html"><i class="fas fa-route"></i> Autonomous Lead Routing</a></li>
+                <li><a href="deployments/predictive-analytics.html"><i class="fas fa-chart-line"></i> GenAI Predictive Analytics</a></li>
+                <li><a href="deployments/custom-infrastructure.html"><i class="fas fa-cubes"></i> Custom AI Infrastructure</a></li>
+                <li><a href="deployments/orchestrated-outreach.html"><i class="fas fa-paper-plane"></i> LLM-Orchestrated Outreach</a></li>
+                
+                <li class="offcanvas-group-title" style="color: var(--primary-coral); margin-top: 10px;"><i class="fas fa-user-graduate"></i> Career Automation</li>
+                <li><a href="deployments/ats-bypass-guide.html"><i class="fas fa-shield-alt"></i> The FAANG ATS Bypass Guide</a></li>
+                <li><a href="deployments/elite-resume-rebuild.html"><i class="fas fa-file-invoice"></i> The Elite Resume Rebuild</a></li>
+              </ul>
+            </li>
+
+            <li class="offcanvas-menu-item">
+              <a href="index.html#partners" class="offcanvas-nav-link">
+                <span><i class="fas fa-microchip"></i> Tech Stack</span>
+              </a>
+            </li>
+
+            <li class="offcanvas-menu-item">
+              <a href="book.html" class="offcanvas-nav-link">
+                <span><i class="fas fa-calendar-check"></i> Book Call</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="offcanvas-info-section">
+        <div class="offcanvas-section-label">Studio Dossier</div>
+        <div class="offcanvas-dossier-card">
+          <h4>God of Automation: Infrastructure for Every Scale</h4>
+          <p>
+            God of Automation is an elite AI Infrastructure Studio engineered by Aryveer Srivastav. We build scalable B2B automation pipelines and algorithmic B2C career optimization systems that permanently eliminate manual workload.
+          </p>
+        </div>
+
+        <div class="offcanvas-contacts-list">
+          <a href="mailto:godofautomationofficial@gmail.com" class="offcanvas-contact-pill">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <p>godofautomationofficial@gmail.com</p>
+            </div>
+          </a>
+          <div class="offcanvas-contact-pill">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span>Location</span>
+              <p>Lucknow, Uttar Pradesh, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas-footer">
+      <a href="book.html" class="neuros-button btn-pill-gradient" style="width: 100%; justify-content: center;">
+        <span>Book Architecture Call</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true">
+    <button type="button" class="search-modal-close" aria-label="Close Search"><i class="fas fa-times"></i></button>
+    <form class="search-form-wrap" id="siteSearchForm">
+      <div class="search-feedback-toast" id="searchToast"><i class="fas fa-check-circle"></i> Navigating to matching topic...</div>
+      <div class="search-input-box">
+        <input type="text" id="siteSearchInput" placeholder="Type keywords (e.g., Hospital OS, ATS, Security)..." aria-label="Search keywords">
+        <button type="submit" aria-label="Perform search"><i class="fas fa-search"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         PAGE 1: /faq HERO SECTION
+         ========================================================================== -->
+    <section class="faq-hero-section">
+      <div class="container">
+        <span class="neuros-subheading reveal-on-scroll">Architecture &amp; Mechanics</span>
+        <h1 class="reveal-on-scroll delay-100" style="font-size: 46px; font-weight: 800; color: var(--color-dark); margin-bottom: 16px; letter-spacing: -1px;">
+          Frequently Asked <span class="has_gradient_color_text">Questions</span>
+        </h1>
+        <p class="reveal-on-scroll delay-200" style="font-size: 18px; color: var(--color-body); max-width: 720px; margin: 0 auto; line-height: 1.65;">
+          Deep-dive answers into the architecture, security, and mechanics of the God of Automation ecosystem.
+        </p>
+
+        <div class="faq-search-wrapper reveal-on-scroll delay-300">
+          <i class="fas fa-search faq-search-icon"></i>
+          <input type="text" class="faq-search-input" id="faqFilterInput" placeholder="Search questions or keywords (e.g. data security, hallucination, CRM, ATS, SLA)...">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ ACCORDION SECTIONS
+         ========================================================================== -->
+    <section class="faq-container-section">
+      <div class="container" style="max-width: 920px;">
+        
+        <!-- SECTION 1: Enterprise Infrastructure & B2B Solutions -->
+        <div class="faq-category-block" id="enterpriseFaq">
+          <div class="faq-category-header">
+            <i class="fas fa-server" style="color: var(--primary-blue); font-size: 22px;"></i>
+            <h3>Section 1: Enterprise Infrastructure &amp; B2B Solutions</h3>
+          </div>
+
+          <div class="faq-accordion-list">
+            <!-- Item 1.1 -->
+            <div class="faq-item active">
+              <button type="button" class="faq-question-btn">
+                <span>How do you guarantee data security in your Custom AI Infrastructure and Hospital OS builds?</span>
+                <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer-content">
+                <p>
+                  We do not rely on multi-tenant, public SaaS dashboards where your data is co-mingled. For enterprise deployments, we architect self-hosted instances of n8n and utilize Supabase (PostgreSQL) for isolated data warehousing. Furthermore, our Autonomous Hospital OS utilizes time-bound, cryptographically signed pre-signed URLs for lab reports that automatically expire after 7 days, ensuring strict compliance with global health data standards.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 1.2 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question-btn">
+                <span>What happens if an LLM (like Gemini 2.0 or Claude) hallucinates during an automated workflow?</span>
+                <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer-content">
+                <p>
+                  We eliminate AI hallucinations through deterministic engineering. We do not plug raw LLMs directly into your customer-facing channels. We use LangGraph and LangChain to create multi-agent reasoning loops, equipped with strict JSON output schemas, negative prompt constraints, and verification nodes. If the AI output fails validation against your company's knowledge base, the payload is routed to a human fallback or Dead Letter Queue (DLQ) rather than sent to the client.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 1.3 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question-btn">
+                <span>Will the Autonomous Lead Routing Engine integrate with my existing CRM?</span>
+                <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer-content">
+                <p>
+                  Yes. Because the engine operates on raw JSON Webhooks via n8n, it is entirely stack-agnostic. Whether you use Salesforce, HubSpot, or a custom internal database, as long as it has a REST API, we can achieve sub-5-second lead injection and Slack/Discord notifications.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 1.4 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question-btn">
+                <span>Who owns the infrastructure and the code after deployment?</span>
+                <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer-content">
+                <p>
+                  Upon final payment and project handover, you own the deployment environment, the infrastructure architecture, and the associated data structures. You are not paying us a monthly "per-seat" SaaS tax. You own the sovereign system; we simply engineer and deploy it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: Career Automation & B2C Solutions -->
+        <div class="faq-category-block" id="careerFaq">
+          <div class="faq-category-header">
+            <i class="fas fa-user-graduate" style="color: var(--primary-coral); font-size: 22px;"></i>
+            <h3>Section 2: Career Automation &amp; B2C Solutions</h3>
+          </div>
+
+          <div class="faq-accordion-list">
+            <!-- Item 2.1 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question-btn">
+                <span>How does the "90%+ ATS Match Guarantee" actually work for the Elite Resume Rebuild?</span>
+                <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer-content">
+                <p>
+                  We do not guess. Once we reconstruct your resume using the XYZ Impact Engine and algorithmic keyword extraction, we run the finalized JSON-optimized plaintext profile through active enterprise ATS sandbox environments (similar to Workday or Taleo). We cross-reference it against your exact target Job Description (JD). If the system scores it below 90%, our engineers manually recalibrate the data payload until it passes the threshold.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2.2 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question-btn">
+                <span>Will the FAANG-Grade ATS Bypass Guide work for non-technical roles?</span>
+                <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer-content">
+                <p>
+                  Yes. While it is engineered for the rigid parsing algorithms of FAANG and tech companies, the 3-step Claude 3.5 Sonnet pipeline relies on semantic gap extraction. It will mathematically reverse-engineer a JD for Finance, Healthcare, or Operations just as effectively as it does for Software Engineering.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2.3 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question-btn">
+                <span>What is the delivery timeline for digital assets and DFY Services?</span>
+                <span class="faq-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-answer-content">
+                <p>
+                  The FAANG-Grade ATS Bypass Guide is delivered instantly as a digital download upon payment. The Elite Resume Rebuild (DFY) is delivered in exactly 48 hours from the moment you submit your raw career dossier to our intake pipeline.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consultation Banner Card -->
+        <div style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(6, 182, 212, 0.05)); border: 1px solid rgba(37, 99, 235, 0.15); border-radius: 20px; padding: 40px; text-align: center; margin-top: 50px;">
+          <h3 style="font-size: 24px; font-weight: 800; color: var(--color-dark); margin-bottom: 12px;">Have a specific architecture question?</h3>
+          <p style="font-size: 16px; color: var(--color-body); max-width: 600px; margin: 0 auto 24px; line-height: 1.6;">
+            Speak directly with Founder &amp; Lead AI Architect Aryveer Srivastav to map your workflows and audit your technical bottlenecks.
+          </p>
+          <a href="book.html" class="neuros-button btn-pill-gradient" style="display: inline-flex;">
+            <span>Book an Architecture Consultation</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="contact-footer-section" style="padding-top: 60px;">
+    <div class="container">
+      <div class="footer-main-links" style="border-top: none; padding-top: 0;">
+        <div class="footer-brand-col">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <img src="assets/images/logo-dark.png" alt="God of Automation" style="filter: brightness(0) invert(1); height: 42px;">
+            <span style="font-size: 22px; font-weight: 800; color: #FFFFFF;">God of Automation</span>
+          </div>
+          <div class="special-text">
+            Sovereign Workflows.<br>Autonomous Operations.
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h6 class="has_gradient_color_text">Navigation</h6>
+          <ul>
+            <li><a href="index.html#about">About Aryveer</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="legal.html">Legal &amp; Governance</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="resources.html">Resources &amp; Playbooks</a></li>
+            <li><a href="book.html">Book Architecture Call</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h6 class="has_gradient_color_text">Deployments</h6>
+          <ul>
+            <li><a href="deployments/custom-infrastructure.html">Custom AI Infrastructure</a></li>
+            <li><a href="deployments/elite-resume-rebuild.html">Elite Resume Rebuild</a></li>
+            <li><a href="deployments/ats-bypass-guide.html">ATS Bypass Guide</a></li>
+            <li><a href="deployments/lead-routing.html">Autonomous Lead Routing</a></li>
+            <li><a href="deployments/predictive-analytics.html">GenAI Predictive Analytics</a></li>
+            <li><a href="deployments/hospital-os.html">Hospital OS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <div>© <a href="index.html#hero"><u>God of Automation</u></a> 2026. Engineered by Aryveer Srivastav. All rights reserved.</div>
+        <div class="footer-btn-row">
+          <a href="faq.html" class="footer-pill-btn btn-cyan"><i class="fas fa-circle-question"></i> FAQs</a>
+          <a href="legal.html" class="footer-pill-btn"><i class="fas fa-scale-balanced"></i> Legal &amp; Governance</a>
+          <a href="terms.html" class="footer-pill-btn"><i class="fas fa-file-contract"></i> Terms of Service</a>
+          <a href="privacy.html" class="footer-pill-btn"><i class="fas fa-shield-halved"></i> Privacy Policy</a>
+          <a href="book.html" class="footer-pill-btn"><i class="fas fa-calendar-check"></i> Book Call</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/database.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ Accordion & Live Filter JS
+    document.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('.faq-item');
+      items.forEach(item => {
+        const btn = item.querySelector('.faq-question-btn');
+        btn?.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          items.forEach(i => i.classList.remove('active'));
+          if (!isActive) item.classList.add('active');
+        });
+      });
+
+      // Filter Search
+      const searchInput = document.getElementById('faqFilterInput');
+      searchInput?.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase().trim();
+        items.forEach(item => {
+          const text = item.innerText.toLowerCase();
+          item.style.display = text.includes(term) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
