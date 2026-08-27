@@ -12,6 +12,15 @@
   }
 }
 
+@keyframes ticker_infinite {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 @keyframes text_move_right {
   0% {
     transform: translate3d(-50%, 0, 0);
@@ -176,3 +185,46 @@
 .delay-300 { transition-delay: 0.24s; }
 .delay-400 { transition-delay: 0.32s; }
 .delay-500 { transition-delay: 0.4s; }
+
+/* SVG Trail & Multi-Colour Glow Animations */
+@keyframes trailDashFlow {
+  0% {
+    stroke-dashoffset: 240;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes colorfulGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.25), 0 0 35px rgba(37, 99, 235, 0.15);
+    border-color: rgba(239, 68, 68, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(239, 68, 68, 0.5), 0 0 50px rgba(124, 58, 237, 0.3);
+    border-color: rgba(124, 58, 237, 0.6);
+  }
+}
+
+.glow-pulse-colorful {
+  animation: colorfulGlowPulse 3s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(1deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-1.5deg);
+  }
+}

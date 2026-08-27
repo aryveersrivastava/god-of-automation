@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Architecture Audit – God of Automation</title>
+  <meta name="description" content="Initiate contact with God of Automation. Book a free 30-minute architecture audit directly with our Lead Systems Architect.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/images/cropped-favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="/assets/images/cropped-favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/assets/images/cropped-favicon-180x180.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="contact-page-body">
+
+  <!-- ==========================================================================
+       SITE HEADER / TOP NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html#hero" class="header-brand" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+        <img src="/assets/images/logo-dark.png" alt="God of Automation" class="header-logo" width="45" height="45">
+        <span style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--color-dark); letter-spacing: -0.5px;">God of Automation</span>
+      </a>
+
+      <!-- Primary Navigation Menu -->
+      <nav class="primary-navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html#hero" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#about" class="nav-link">
+              Pages <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#about">GOAT Standard</a></li>
+              <li><a href="index.html#process">The Process</a></li>
+              <li><a href="index.html#testimonials">Deployment Reviews</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#features" class="nav-link">
+              Solutions <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#features">Deployments</a></li>
+              <li><a href="index.html#services">Services</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#partners" class="nav-link">Tech Stack</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item active">
+            <a href="contact.html" class="nav-link active-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="header-action-btn open-search-btn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <button type="button" class="header-action-btn open-sidebar-btn" aria-label="Open Sidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="https://calendly.com/godofautomationofficial/30min" target="_blank" rel="noopener" class="neuros-button btn-pill-gradient"><span>Book a Call</span><i class="fas fa-calendar-check"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       OFF-CANVAS SIDEBAR DRAWER
+       ========================================================================== -->
+  <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+  <aside class="offcanvas-sidebar" id="offcanvasSidebar" aria-label="Navigation Drawer">
+    <div class="offcanvas-inner-scroll">
+      <div class="offcanvas-header">
+        <a href="index.html#hero" class="offcanvas-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+          <img src="/assets/images/logo-dark.png" alt="God of Automation" width="36" height="36">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 18px; color: var(--color-dark);">God of Automation</span>
+        </a>
+        <button type="button" class="offcanvas-close-btn" aria-label="Close Sidebar"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="offcanvas-nav-section">
+        <div class="offcanvas-section-label">Navigation</div>
+        <nav class="offcanvas-mobile-nav" aria-label="Mobile Navigation">
+          <ul class="offcanvas-menu-list">
+            <li class="offcanvas-menu-item"><a href="index.html#hero" class="offcanvas-nav-link"><span><i class="fas fa-house-chimney"></i> Home</span></a></li>
+            <li class="offcanvas-menu-item"><a href="about.html" class="offcanvas-nav-link"><span><i class="fas fa-info-circle"></i> About</span></a></li>
+            <li class="offcanvas-menu-item"><a href="contact.html" class="offcanvas-nav-link active"><span><i class="fas fa-calendar-check"></i> Contact</span></a></li>
+            <li class="offcanvas-menu-item"><a href="index.html#partners" class="offcanvas-nav-link"><span><i class="fas fa-layer-group"></i> Tech Stack</span></a></li>
+            <li class="offcanvas-menu-item"></li>
+            <li class="offcanvas-menu-item"><a href="faq.html" class="offcanvas-nav-link"><span><i class="fas fa-circle-question"></i> FAQs</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main>
+
+    <!-- Hero Header -->
+    <section class="contact-hero-section">
+      <div class="contact-hero-glow"></div>
+      <div class="container relative-z2">
+        <div class="contact-header-box reveal-on-scroll">
+          <div class="contact-tag-badge">
+            <i class="fas fa-bolt"></i> INITIATE CONTACT
+          </div>
+          
+          <h1 class="contact-hero-title">
+            Let’s Architect <span class="has_gradient_color_text">Your Engine.</span>
+          </h1>
+
+          <p class="contact-hero-subtitle">
+            Book a free architecture audit directly with our Lead Systems Architect.
+          </p>
+        </div>
+
+        <!-- 2-Column Main Contact & Audit Grid -->
+        <div class="contact-main-grid reveal-on-scroll delay-100">
+          
+          <!-- Column 1: Book an Architecture Audit Card -->
+          <div class="contact-audit-card">
+            <div class="audit-card-header">
+              <div class="audit-card-icon">
+                <i class="fas fa-compass-drafting"></i>
+              </div>
+              <div>
+                <span class="audit-duration-badge"><i class="fas fa-clock"></i> 30-Minute Architecture Audit</span>
+                <h3 class="audit-card-title">Book an Architecture Audit</h3>
+              </div>
+            </div>
+
+            <p class="audit-card-desc">
+              30 minutes. No commitment. Walk away knowing exactly where your operations are leaking time and revenue.
+            </p>
+
+            <!-- Value Prop Bullets -->
+            <div class="audit-features-list">
+              <div class="audit-feature-item">
+                <div class="audit-feature-check"><i class="fas fa-check"></i></div>
+                <div class="audit-feature-text">Pinpoint your top 3 operational bottlenecks.</div>
+              </div>
+
+              <div class="audit-feature-item">
+                <div class="audit-feature-check"><i class="fas fa-check"></i></div>
+                <div class="audit-feature-text">Get a clear, actionable automation blueprint.</div>
+              </div>
+
+              <div class="audit-feature-item">
+                <div class="audit-feature-check"><i class="fas fa-check"></i></div>
+                <div class="audit-feature-text">Uncover hidden hours wasted on manual data entry.</div>
+              </div>
+
+              <div class="audit-feature-item">
+                <div class="audit-feature-check"><i class="fas fa-check"></i></div>
+                <div class="audit-feature-text">Zero sales pressure. Talk to a builder, not a salesperson.</div>
+              </div>
+            </div>
+
+            <!-- Primary Calendly Booking Button -->
+            <div class="audit-action-wrap">
+              <a href="https://calendly.com/godofautomationofficial/30min" target="_blank" rel="noopener" class="neuros-button btn-pill-gradient audit-btn-main">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Schedule on Calendly</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <span class="audit-direct-reassurance">
+                <i class="fas fa-shield-check"></i> Direct 1-on-1 session with Founder &amp; Lead Systems Architect Aryveer Srivastav.
+              </span>
+            </div>
+          </div>
+
+          <!-- Column 2: Direct Contact & Deployment Operations -->
+          <div class="contact-ops-card">
+            <h3 class="ops-card-title">Direct Operational Channels</h3>
+            <p class="ops-card-subtitle">
+              Have questions prior to your audit? Connect with our systems team through official secure channels.
+            </p>
+
+            <!-- Contact Specs Grid -->
+            <div class="ops-specs-list">
+              <!-- Item 1: Email -->
+              <div class="ops-spec-item">
+                <div class="ops-spec-icon"><i class="fas fa-envelope"></i></div>
+                <div class="ops-spec-details">
+                  <div class="ops-spec-label">Direct Email</div>
+                  <a href="mailto:godofautomationofficial@gmail.com" class="ops-spec-val ops-email-link">
+                    godofautomationofficial@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Item 2: Response Time -->
+              <div class="ops-spec-item">
+                <div class="ops-spec-icon"><i class="fas fa-stopwatch"></i></div>
+                <div class="ops-spec-details">
+                  <div class="ops-spec-label">Response Time SLA</div>
+                  <div class="ops-spec-val">We typically reply within 12 to 24 hours.</div>
+                </div>
+              </div>
+
+              <!-- Item 3: Deployment Timeline -->
+              <div class="ops-spec-item">
+                <div class="ops-spec-icon"><i class="fas fa-rocket"></i></div>
+                <div class="ops-spec-details">
+                  <div class="ops-spec-label">Deployment Horizon</div>
+                  <div class="ops-spec-val">Engagements typically begin within 1 to 2 weeks of your free audit.</div>
+                </div>
+              </div>
+
+              <!-- Item 4: Availability -->
+              <div class="ops-spec-item">
+                <div class="ops-spec-icon"><i class="fas fa-globe"></i></div>
+                <div class="ops-spec-details">
+                  <div class="ops-spec-label">Global Availability</div>
+                  <div class="ops-spec-val">Available Globally | Remote-first infrastructure.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Direct Message Form -->
+            <div class="ops-quick-form-card">
+              <h4 class="ops-form-heading"><i class="fas fa-paper-plane"></i> Quick Inbound Dispatch</h4>
+              <form class="contact-direct-form" onsubmit="event.preventDefault(); alert('Message dispatched! We will reply within 12-24 hours.');">
+                <div class="form-row-2col">
+                  <div class="form-group-item">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="e.g. Sarah Jenkins" required>
+                  </div>
+                  <div class="form-group-item">
+                    <label>Work Email</label>
+                    <input type="email" placeholder="sarah@company.com" required>
+                  </div>
+                </div>
+                <div class="form-group-item">
+                  <label>Current Bottleneck / Automation Goal</label>
+                  <textarea rows="3" placeholder="Tell us about the manual workload or systems you want to automate..." required></textarea>
+                </div>
+                <button type="submit" class="neuros-button btn-pill-solid" style="width: 100%; justify-content: center;">
+                  <span>Dispatch Inbound Message</span>
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+  <footer class="contact-footer-section" id="contact">
+    <div class="container">
+      <div class="footer-top-row">
+        <!-- Brand & Tagline -->
+        <div class="footer-brand-column">
+          <div class="footer-brand-header-wrap">
+            <a href="index.html#hero" class="footer-brand-title">God Of Automation</a>
+          </div>
+          <p class="footer-brand-desc">
+            Your full-stack AI automation partner. We build the systems that let your business grow while you sleep.
+          </p>
+        </div>
+
+        <!-- Right Side: Live Indicator & Navigation Buttons -->
+        <div class="footer-right-column">
+          <div class="footer-status-badge">
+            <span class="footer-status-pulse"></span>
+            <span>All Systems Operational &bull; 24/7 Enterprise Deployments</span>
+          </div>
+
+          <div class="footer-nav-buttons">
+            <a href="about.html" class="footer-btn-item"><i class="fas fa-info-circle"></i> About</a>
+            <a href="contact.html" class="footer-btn-item active-pill"><i class="fas fa-calendar-check"></i> Contact</a>
+            <a href="faq.html" class="footer-btn-item"><i class="fas fa-circle-question"></i> FAQs</a>
+            <a href="legal.html" class="footer-btn-item"><i class="fas fa-scale-balanced"></i> Legal &amp; Governance</a>
+            <a href="terms.html" class="footer-btn-item"><i class="fas fa-file-contract"></i> Terms of Service</a>
+            <a href="privacy.html" class="footer-btn-item"><i class="fas fa-shield-halved"></i> Privacy Policy</a>
+            <a href="https://calendly.com/godofautomationofficial/30min" target="_blank" rel="noopener" class="footer-btn-item btn-highlight"><i class="fas fa-calendar-check"></i> Book a Call &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="footer-divider-line"></div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-row">
+        <div class="footer-copyright-text">
+          &copy; 2026 God Of Automation. All rights reserved.
+        </div>
+        <div class="footer-social-icons">
+          <a href="https://www.instagram.com/god.of.automation/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/aryveer-srivastav" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="mailto:godofautomationofficial@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

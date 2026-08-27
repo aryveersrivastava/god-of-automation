@@ -15,7 +15,6 @@ export default defineConfig({
         terms: resolve(__dirname, 'terms.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         book: resolve(__dirname, 'book.html'),
-        resources: resolve(__dirname, 'resources.html'),
         'hospital-os': resolve(__dirname, 'deployments/hospital-os.html'),
         'distributed-transaction': resolve(__dirname, 'deployments/distributed-transaction.html'),
         'lead-routing': resolve(__dirname, 'deployments/lead-routing.html'),

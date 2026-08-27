@@ -83,29 +83,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // 5. Animated Number Counters
-  const counterElements = document.querySelectorAll('.counter-number');
+  // 5. Universal Animated Number Counters
+  const counterElements = document.querySelectorAll('.counter-number, [data-target], .hero-stat-number');
   const counterObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const targetNumber = parseInt(entry.target.getAttribute('data-target') || '50', 10);
-        let currentNumber = 0;
-        const duration = 1600;
-        const stepTime = Math.abs(Math.floor(duration / targetNumber));
-
-        const timer = setInterval(() => {
-          currentNumber += 1;
-          entry.target.textContent = currentNumber;
-          if (currentNumber >= targetNumber) {
-            clearInterval(timer);
-            entry.target.textContent = targetNumber;
+        const el = entry.target;
+        const rawTarget = el.getAttribute('data-target') || el.textContent.trim();
+        const prefix = el.getAttribute('data-prefix') || (rawTarget.startsWith('<') ? '<' : rawTarget.startsWith('$') ? '$' : '');
+        const suffix = el.getAttribute('data-suffix') || (rawTarget.endsWith('+') ? '+' : rawTarget.endsWith('%') ? '%' : rawTarget.endsWith('s') ? 's' : '');
+        
+        const numericMatch = rawTarget.match(/[\d.]+/);
+        if (!numericMatch) return;
+        
+        const targetValue = parseFloat(numericMatch[0]);
+        const isDecimal = rawTarget.includes('.');
+        const decimalPlaces = isDecimal ? (rawTarget.split('.')[1].match(/\d+/) || ['0'])[0].length : 0;
+        
+        const duration = 1800;
+        const startTime = performance.now();
+        
+        function updateCount(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const currentVal = targetValue * easeOut;
+          
+          el.textContent = `${prefix}${isDecimal ? currentVal.toFixed(decimalPlaces) : Math.floor(currentVal)}${suffix}`;
+          
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            el.textContent = `${prefix}${isDecimal ? targetValue.toFixed(decimalPlaces) : targetValue}${suffix}`;
           }
-        }, Math.max(stepTime, 20));
-
-        observer.unobserve(entry.target);
+        }
+        
+        requestAnimationFrame(updateCount);
+        observer.unobserve(el);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.15 });
 
   counterElements.forEach(el => counterObserver.observe(el));
 
@@ -146,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
           formStatus.innerHTML = `
             <div style="display: flex; flex-direction: column; gap: 4px;">
               <div><i class="fas fa-check-circle"></i> <strong>Inquiry Stored in Sovereign Database!</strong></div>
-              <div style="font-size: 13px;">Reference ID: <span class="db-ref-code">${result.referenceId}</span>. Aryveer will follow up within 24 hours.</div>
+              <div style="font-size: 13px;">Reference ID: <span class="db-ref-code">${result.referenceId}</span>. The God of Automation Engineering Team will follow up within 24 hours.</div>
             </div>
           `;
           contactForm.reset();
@@ -613,5 +630,20 @@ document.addEventListener('DOMContentLoaded', () => {
       target = '#contact';
     }
     navigateToSearch(target, query);
+  });
+
+  // Pipeline Nodes Interactive Click & Active State Handling
+  const pipelineNodes = document.querySelectorAll('.pipeline-node-box');
+  pipelineNodes.forEach((node) => {
+    node.addEventListener('click', () => {
+      node.classList.add('is-clicked');
+      setTimeout(() => node.classList.remove('is-clicked'), 250);
+      
+      const isAlreadySelected = node.classList.contains('is-selected');
+      pipelineNodes.forEach(n => n.classList.remove('is-selected'));
+      if (!isAlreadySelected) {
+        node.classList.add('is-selected');
+      }
+    });
   });
 });

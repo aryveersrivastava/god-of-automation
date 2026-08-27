@@ -1,420 +1,84 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book an Architecture Consultation – God of Automation</title>
-  <meta name="description" content="Schedule a direct technical teardown with Founder Aryveer Srivastav. We will map your operational bottlenecks and design a custom AI infrastructure blueprint.">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="/assets/images/cropped-favicon-32x32.png" sizes="32x32">
-  <link rel="icon" href="/assets/images/cropped-favicon-192x192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="/assets/images/cropped-favicon-180x180.png">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="/css/animations.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Booking... — God of Automation</title>
+  <meta name="robots" content="noindex">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F8FAFC;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wrap {
+      text-align: center;
+      padding: 48px 32px;
+    }
+    .icon {
+      font-size: 52px;
+      margin-bottom: 24px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #090E17;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 16px;
+      color: #64748B;
+      margin-bottom: 28px;
+    }
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #EF4444 100%);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    a.btn:hover { opacity: 0.88; }
+    .back {
+      display: block;
+      margin-top: 18px;
+      font-size: 14px;
+      color: #64748B;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Site Header -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html#hero" class="header-brand" style="display: flex; align-items: center; gap: 12px;">
-        <img src="/assets/images/logo-dark.png" alt="God of Automation" class="header-logo" width="45" height="45">
-        <span style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--color-dark); letter-spacing: -0.5px;">God of Automation</span>
-      </a>
-
-      <nav class="primary-navigation" aria-label="Main Navigation">
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html#hero" class="nav-link">Home</a></li>
-          <li class="nav-item">
-            <a href="index.html#about" class="nav-link">Pages <i class="fas fa-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="index.html#about">The Architect</a></li>
-              <li><a href="index.html#team">Leadership</a></li>
-              <li><a href="index.html#testimonials">Client Stories</a></li>
-              <li><a href="index.html#contact">Contacts</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="index.html#features" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
-            <div class="dropdown-menu dropdown-solutions-menu">
-              <!-- Group 1: Enterprise Infrastructure -->
-              <div class="dropdown-group-col">
-                <a href="index.html#features" class="dropdown-group-header header-enterprise">
-                  <span><i class="fas fa-server"></i> Enterprise Infrastructure</span>
-                  <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
-                </a>
-                <ul class="dropdown-group-list">
-                  <li><a href="deployments/hospital-os.html"><i class="fas fa-hospital-user"></i> Autonomous Hospital OS</a></li>
-                  <li><a href="deployments/distributed-transaction.html"><i class="fas fa-network-wired"></i> Distributed Transaction System</a></li>
-                  <li><a href="deployments/lead-routing.html"><i class="fas fa-route"></i> Autonomous Lead Routing</a></li>
-                  <li><a href="deployments/predictive-analytics.html"><i class="fas fa-chart-line"></i> GenAI Predictive Analytics</a></li>
-                  <li><a href="deployments/custom-infrastructure.html"><i class="fas fa-cubes"></i> Custom AI Infrastructure</a></li>
-                  <li><a href="deployments/orchestrated-outreach.html"><i class="fas fa-paper-plane"></i> LLM-Orchestrated Outreach</a></li>
-                </ul>
-              </div>
-
-              <!-- Group 2: Career Automation -->
-              <div class="dropdown-group-col">
-                <a href="index.html#services" class="dropdown-group-header header-career">
-                  <span><i class="fas fa-user-graduate"></i> Career Automation</span>
-                  <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
-                </a>
-                <ul class="dropdown-group-list">
-                  <li><a href="deployments/ats-bypass-guide.html"><i class="fas fa-shield-alt"></i> The FAANG ATS Bypass Guide</a></li>
-                  <li><a href="deployments/elite-resume-rebuild.html"><i class="fas fa-file-invoice"></i> The Elite Resume Rebuild</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item"><a href="index.html#partners" class="nav-link">Tech Stack</a></li>
-          <li class="nav-item active"><a href="book.html" class="nav-link">Book Call</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <button type="button" class="header-action-btn open-search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
-        <button type="button" class="header-action-btn open-sidebar-btn" aria-label="Open Sidebar"><i class="fas fa-bars"></i></button>
-        <a href="book.html" class="neuros-button btn-pill-gradient">
-          <span>Deploy Systems</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Offcanvas Sidebar -->
-  <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
-  <aside class="offcanvas-sidebar" id="offcanvasSidebar" aria-label="Navigation & Studio Drawer">
-    <div class="offcanvas-inner-scroll">
-      <div class="offcanvas-header">
-        <a href="index.html#hero" class="offcanvas-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-          <img src="/assets/images/logo-dark.png" alt="God of Automation" width="36" height="36">
-          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 18px; color: var(--color-dark); letter-spacing: -0.5px;">God of Automation</span>
-        </a>
-        <button type="button" class="offcanvas-close-btn" aria-label="Close Sidebar"><i class="fas fa-times"></i></button>
-      </div>
-
-      <div class="offcanvas-nav-section">
-        <div class="offcanvas-section-label">Navigation</div>
-        <nav class="offcanvas-mobile-nav" aria-label="Mobile Navigation">
-          <ul class="offcanvas-menu-list">
-            <!-- Item 1: Home -->
-            <li class="offcanvas-menu-item">
-              <a href="index.html#hero" class="offcanvas-nav-link">
-                <span><i class="fas fa-house-chimney"></i> Home</span>
-              </a>
-            </li>
-
-            <!-- Item 2: Pages Accordion -->
-            <li class="offcanvas-menu-item has-submenu">
-              <div class="offcanvas-menu-title">
-                <a href="index.html#about" class="offcanvas-nav-link">
-                  <span><i class="fas fa-layer-group"></i> Pages</span>
-                </a>
-                <button type="button" class="offcanvas-submenu-toggle" aria-label="Toggle Pages Submenu">
-                  <i class="fas fa-chevron-down"></i>
-                </button>
-              </div>
-              <ul class="offcanvas-submenu">
-                <li><a href="index.html#about"><i class="fas fa-user-astronaut"></i> The Architect</a></li>
-                <li><a href="index.html#team"><i class="fas fa-crown"></i> Leadership</a></li>
-                <li><a href="index.html#testimonials"><i class="fas fa-comments"></i> Client Stories</a></li>
-                <li><a href="index.html#contact"><i class="fas fa-address-book"></i> Contacts</a></li>
-              </ul>
-            </li>
-
-            <!-- Item 3: Solutions Accordion -->
-            <li class="offcanvas-menu-item has-submenu open">
-              <div class="offcanvas-menu-title">
-                <a href="index.html#features" class="offcanvas-nav-link">
-                  <span><i class="fas fa-cubes-stacked"></i> Solutions</span>
-                </a>
-                <button type="button" class="offcanvas-submenu-toggle" aria-label="Toggle Solutions Submenu">
-                  <i class="fas fa-chevron-down"></i>
-                </button>
-              </div>
-              <ul class="offcanvas-submenu">
-                <li class="offcanvas-group-title" style="color: var(--primary-blue);"><i class="fas fa-server"></i> Enterprise Infrastructure</li>
-                <li><a href="deployments/hospital-os.html"><i class="fas fa-hospital-user"></i> Autonomous Hospital OS</a></li>
-                <li><a href="deployments/distributed-transaction.html"><i class="fas fa-network-wired"></i> Distributed Transaction System</a></li>
-                <li><a href="deployments/lead-routing.html"><i class="fas fa-route"></i> Autonomous Lead Routing</a></li>
-                <li><a href="deployments/predictive-analytics.html"><i class="fas fa-chart-line"></i> GenAI Predictive Analytics</a></li>
-                <li><a href="deployments/custom-infrastructure.html"><i class="fas fa-cubes"></i> Custom AI Infrastructure</a></li>
-                <li><a href="deployments/orchestrated-outreach.html"><i class="fas fa-paper-plane"></i> LLM-Orchestrated Outreach</a></li>
-                
-                <li class="offcanvas-group-title" style="color: var(--primary-coral); margin-top: 10px;"><i class="fas fa-user-graduate"></i> Career Automation</li>
-                <li><a href="deployments/ats-bypass-guide.html"><i class="fas fa-shield-alt"></i> The FAANG ATS Bypass Guide</a></li>
-                <li><a href="deployments/elite-resume-rebuild.html"><i class="fas fa-file-invoice"></i> The Elite Resume Rebuild</a></li>
-              </ul>
-            </li>
-
-            <!-- Item 4: Tech Stack -->
-            <li class="offcanvas-menu-item">
-              <a href="index.html#partners" class="offcanvas-nav-link">
-                <span><i class="fas fa-microchip"></i> Tech Stack</span>
-              </a>
-            </li>
-
-            <!-- Item 5: Book Call -->
-            <li class="offcanvas-menu-item active">
-              <a href="book.html" class="offcanvas-nav-link">
-                <span><i class="fas fa-calendar-check"></i> Book Call</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="offcanvas-info-section">
-        <div class="offcanvas-section-label">Studio Dossier</div>
-        <div class="offcanvas-dossier-card">
-          <h4>God of Automation: Infrastructure for Every Scale</h4>
-          <p>Elite AI Infrastructure Studio engineered by Aryveer Srivastav. We build scalable B2B automation pipelines and algorithmic B2C career optimization systems.</p>
-        </div>
-        <div class="offcanvas-contacts-list">
-          <a href="mailto:godofautomationofficial@gmail.com" class="offcanvas-contact-pill">
-            <i class="fas fa-envelope"></i>
-            <div><span>Email</span><p>godofautomationofficial@gmail.com</p></div>
-          </a>
-          <div class="offcanvas-contact-pill">
-            <i class="fas fa-map-marker-alt"></i>
-            <div><span>Location</span><p>Lucknow, Uttar Pradesh, India</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="offcanvas-footer">
-      <a href="book.html" class="neuros-button btn-pill-gradient" style="width: 100%; justify-content: center;">
-        <span>Book Architecture Call</span>
-        <i class="fas fa-arrow-right"></i>
-      </a>
-    </div>
-  </aside>
-
-  <!-- Search Modal -->
-  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true">
-    <button type="button" class="search-modal-close" aria-label="Close Search"><i class="fas fa-times"></i></button>
-    <form class="search-form-wrap" id="siteSearchForm">
-      <div class="search-feedback-toast" id="searchToast"><i class="fas fa-check-circle"></i> Navigating to matching topic...</div>
-      <div class="search-input-box">
-        <input type="text" id="siteSearchInput" placeholder="Type to search..." aria-label="Search keywords">
-        <button type="submit" aria-label="Perform search"><i class="fas fa-search"></i></button>
-      </div>
-    </form>
+  <div class="wrap">
+    <div class="icon">📅</div>
+    <h1>Opening your booking page...</h1>
+    <p>If the calendar didn't open automatically, click the button below.</p>
+    <a href="https://calendly.com/godofautomationofficial/30min" target="_blank" rel="noopener" class="btn" id="calendlyBtn">
+      Open Calendly &nbsp;→
+    </a>
+    <a class="back" href="index.html">← Back to God of Automation</a>
   </div>
 
-  <main>
-    <!-- ==========================================================================
-         PAGE 1: /book SPLIT LAYOUT
-         ========================================================================== -->
-    <section class="book-page-wrap">
-      <div class="container">
-        <div class="book-split-grid">
-          <!-- Left Column: Value Proposition & Qualification -->
-          <div class="book-value-card reveal-on-scroll">
-            <span class="neuros-subheading">Discovery &amp; Architecture Call</span>
-            <h1>Book an Architecture <span class="has_gradient_color_text">Consultation</span></h1>
-            <p class="book-lead-text">
-              Schedule a direct technical teardown with Founder Aryveer Srivastav. We will map your operational bottlenecks and design a custom AI infrastructure blueprint.
-            </p>
-
-            <div class="qualification-box">
-              <h4><i class="fas fa-bolt" style="color: #06B6D4;"></i> What Happens on This Call:</h4>
-              <ul class="qualification-list">
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <div><strong>Direct Founder Access:</strong> 45-minute technical deep dive with Lead AI Architect Aryveer Srivastav.</div>
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <div><strong>Custom Infrastructure Blueprint:</strong> We map your specific pipeline schematics across n8n, Supabase, LangGraph, or Kafka.</div>
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <div><strong>Latency &amp; ROI Analysis:</strong> Quantifying manual bottleneck reduction and target &lt;5s SLA execution.</div>
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <div><strong>Zero High-Pressure Sales:</strong> Pure architectural advisory and feasibility assessment for your team.</div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="qualification-box" style="background: #F8FAFC; border-color: rgba(6, 182, 212, 0.3);">
-              <h4><i class="fas fa-shield-halved" style="color: var(--primary-blue);"></i> Qualification Criteria:</h4>
-              <p style="font-size: 14px; color: var(--color-body); line-height: 1.6; margin: 0;">
-                Our bespoke implementations are engineered specifically for enterprise teams, high-growth startups, and technical professionals who require deterministic, low-latency sovereign automation pipelines.
-              </p>
-            </div>
-          </div>
-
-          <!-- Right Column: Sleek Dark Glass Intake Form -->
-          <div class="book-form-col reveal-on-scroll delay-100">
-            <div class="book-form-card">
-              <div class="book-form-header">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-                  <span style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #06B6D4; background: rgba(6, 182, 212, 0.12); padding: 4px 12px; border-radius: 9999px;">
-                    <i class="fas fa-circle" style="font-size: 8px; margin-right: 4px; color: #10B981;"></i> Sovereign Intake Active
-                  </span>
-                  <span style="font-size: 12px; color: rgba(255,255,255,0.5);">24h SLA Follow-up</span>
-                </div>
-                <h3>Request Pipeline Review</h3>
-                <p>Fill in your technical details below to initiate direct blueprint drafting.</p>
-              </div>
-
-              <form id="bookConsultationPageForm">
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.8); margin-bottom: 6px; display: block;">Full Name *</label>
-                  <input type="text" class="form-input" id="bpFullName" name="fullName" placeholder="e.g. John Doe" required>
-                </div>
-
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.8); margin-bottom: 6px; display: block;">Enterprise Email *</label>
-                  <input type="email" class="form-input" id="bpEmail" name="email" placeholder="e.g. john@company.com" required>
-                </div>
-
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.8); margin-bottom: 6px; display: block;">Current Tech Stack (Optional)</label>
-                  <input type="text" class="form-input" id="bpTechStack" name="techStack" placeholder="e.g. n8n, Supabase, Python, Kafka, HubSpot">
-                </div>
-
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.8); margin-bottom: 6px; display: block;">Primary Bottleneck to Automate *</label>
-                  <textarea class="form-textarea" id="bpMessage" name="message" placeholder="Describe the manual bottleneck, high-latency workflow, or target volume you need automated..." rows="4" required></textarea>
-                </div>
-
-                <button type="submit" class="neuros-button cyan-glow-btn" id="bpSubmitBtn" style="width: 100%; justify-content: center; padding: 18px 24px; font-size: 16px; border-radius: 14px;">
-                  <span>Request Pipeline Review</span>
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-                <div class="form-status-msg" id="bpFormStatus"></div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="contact-footer-section" style="padding-top: 60px;">
-    <div class="container">
-      <div class="footer-main-links" style="border-top: none; padding-top: 0;">
-        <div class="footer-brand-col">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <img src="/assets/images/logo-dark.png" alt="God of Automation" style="filter: brightness(0) invert(1); height: 42px;">
-            <span style="font-size: 22px; font-weight: 800; color: #FFFFFF;">God of Automation</span>
-          </div>
-          <div class="special-text">
-            Sovereign Workflows.<br>Autonomous Operations.
-          </div>
-        </div>
-
-        <div class="footer-links-col">
-          <h6 class="has_gradient_color_text">Navigation</h6>
-          <ul>
-            <li><a href="index.html#about">About Aryveer</a></li>
-            <li><a href="faq.html">Frequently Asked Questions</a></li>
-            <li><a href="legal.html">Legal &amp; Governance</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="resources.html">Resources &amp; Playbooks</a></li>
-            <li><a href="book.html">Book Architecture Call</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links-col">
-          <h6 class="has_gradient_color_text">Deployments</h6>
-          <ul>
-            <li><a href="deployments/custom-infrastructure.html">Custom AI Infrastructure</a></li>
-            <li><a href="deployments/elite-resume-rebuild.html">Elite Resume Rebuild</a></li>
-            <li><a href="deployments/ats-bypass-guide.html">ATS Bypass Guide</a></li>
-            <li><a href="deployments/lead-routing.html">Autonomous Lead Routing</a></li>
-            <li><a href="deployments/hospital-os.html">Hospital OS</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom-bar">
-        <div>© <a href="index.html#hero"><u>God of Automation</u></a> 2026. Engineered by Aryveer Srivastav. All rights reserved.</div>
-        <div class="footer-btn-row">
-          <a href="faq.html" class="footer-pill-btn"><i class="fas fa-circle-question"></i> FAQs</a>
-          <a href="legal.html" class="footer-pill-btn"><i class="fas fa-scale-balanced"></i> Legal &amp; Governance</a>
-          <a href="terms.html" class="footer-pill-btn"><i class="fas fa-file-contract"></i> Terms of Service</a>
-          <a href="privacy.html" class="footer-pill-btn"><i class="fas fa-shield-halved"></i> Privacy Policy</a>
-          <a href="book.html" class="footer-pill-btn btn-cyan"><i class="fas fa-calendar-check"></i> Book Call</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/database.js"></script>
-  <script src="/js/main.js"></script>
   <script>
-    // Dedicated handler for /book page intake form
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('bookConsultationPageForm');
-      const statusMsg = document.getElementById('bpFormStatus');
-      const submitBtn = document.getElementById('bpSubmitBtn');
-
-      if (form) {
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          if (!submitBtn) return;
-          const origText = submitBtn.innerHTML;
-          submitBtn.disabled = true;
-          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Writing Blueprint Request...';
-
-          const leadData = {
-            fullName: document.getElementById('bpFullName')?.value || '',
-            email: document.getElementById('bpEmail')?.value || '',
-            subject: 'Architecture Blueprint Consultation Request',
-            selectedService: 'Custom Architecture Teardown',
-            message: `Tech Stack: ${document.getElementById('bpTechStack')?.value || 'Not specified'}\n\nBottleneck: ${document.getElementById('bpMessage')?.value || ''}`,
-            sourcePage: '/book'
-          };
-
-          try {
-            let result = { referenceId: 'GOA-' + Math.floor(10000 + Math.random() * 90000) };
-            if (window.GOADatabase) {
-              result = await window.GOADatabase.createLead(leadData);
-            }
-
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Request Queued';
-
-            if (statusMsg) {
-              statusMsg.className = 'form-status-msg success is-visible';
-              statusMsg.innerHTML = `
-                <div style="display: flex; flex-direction: column; gap: 4px; color: #34D399; margin-top: 14px;">
-                  <div><i class="fas fa-check-circle"></i> <strong>Consultation Blueprint Queued!</strong></div>
-                  <div style="font-size: 13px; color: rgba(255,255,255,0.8);">Ref ID: <span class="db-ref-code" style="color:#06B6D4;">${result.referenceId}</span>. Aryveer will review your stack within 24 hours.</div>
-                </div>
-              `;
-              form.reset();
-            }
-          } catch (err) {
-            console.error(err);
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = origText;
-            if (statusMsg) {
-              statusMsg.className = 'form-status-msg error is-visible';
-              statusMsg.innerHTML = '<i class="fas fa-triangle-exclamation"></i> Saved locally. Our team will contact you.';
-            }
-          }
-        });
-      }
+    // Auto-open Calendly in a new tab immediately
+    window.addEventListener('DOMContentLoaded', function () {
+      window.open('https://calendly.com/godofautomationofficial/30min', '_blank', 'noopener,noreferrer');
     });
   </script>
 </body>

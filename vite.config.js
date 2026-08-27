@@ -1,4 +1,4 @@
-﻿import { defineConfig } from 'vite';
+import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -10,12 +10,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html'),
+        contact: resolve(__dirname, 'contact.html'),
         faq: resolve(__dirname, 'faq.html'),
         legal: resolve(__dirname, 'legal.html'),
         terms: resolve(__dirname, 'terms.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         book: resolve(__dirname, 'book.html'),
-        resources: resolve(__dirname, 'resources.html'),
         'hospital-os': resolve(__dirname, 'deployments/hospital-os.html'),
         'distributed-transaction': resolve(__dirname, 'deployments/distributed-transaction.html'),
         'lead-routing': resolve(__dirname, 'deployments/lead-routing.html'),
